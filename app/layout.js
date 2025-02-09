@@ -1,8 +1,11 @@
 import "@/styles/globals.css"
 import { Inter } from "next/font/google"
+import {HeroUIProvider} from '@heroui/react'
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Script from "next/script"
+import Navbar from '../components/layout/Navbar'
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,11 +22,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
       <body className={inter.className}>
+      <HeroUIProvider>
         <div className="flex flex-col min-h-screen">
-          <Header />
+          {/* <Header /> */}
+          <Navbar/>
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
+        </HeroUIProvider>
         <Script src="https://unpkg.com/aos@next/dist/aos.js" />
         <Script id="aos-init">
           {`

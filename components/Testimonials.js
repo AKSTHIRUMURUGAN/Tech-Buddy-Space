@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -23,20 +23,26 @@ const testimonials = [
       "The Learn-Practice-Build-Compete cycle really works! I've grown so much as a developer and even won a hackathon thanks to TechBuddySpace.",
     avatar: "/placeholder.svg?height=40&width=40",
   },
-]
+];
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section
+      id="testimonials"
+      className="py-20  bg-white dark:bg-black transition-colors duration-500"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-3xl font-bold text-center glow-text" data-aos="fade-up">
+        <h2
+          className="mb-12 text-3xl font-bold text-center glow-text text-gray-900 dark:text-white"
+          data-aos="fade-up"
+        >
           What Our Students Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="transition-all duration-300 hover:shadow-lg glow-card"
+              className="transition-all duration-300 hover:shadow-lg glow-card dark:bg-gray-800 dark:text-white"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
@@ -47,19 +53,22 @@ export default function Testimonials() {
                     <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <div>{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                    <div className="text-gray-900 dark:text-white">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground dark:text-gray-400">
+                      {testimonial.role}
+                    </div>
                   </div>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">{testimonial.content}</p>
+                <p className="text-muted-foreground dark:text-gray-300">
+                  {testimonial.content}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -77,6 +77,11 @@ import VortexEffect from '../../components/aceternity/VortexFull'
 import WavyBackgroundEffect from '../../components/aceternity/WavyBackground'
 import WobbleCardEffect from '../../components/aceternity/WobbleCard'
 import ThemeToggle from '../../components/Theme'
+import {Button} from '@heroui/react'
+
+
+      
+
 const page = () => {
   return (
     <>
@@ -159,6 +164,7 @@ const page = () => {
    <VortexEffect/>
    <WavyBackgroundEffect/>
    <WobbleCardEffect/>
+   <Button>Click me</Button>
     </>
   )
 }

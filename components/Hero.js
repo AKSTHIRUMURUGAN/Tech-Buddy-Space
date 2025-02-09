@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { FaRocket } from "react-icons/fa"
-import Typed from "typed.js"
+import { useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { FaRocket } from "react-icons/fa";
+import Typed from "typed.js";
 
 export default function Hero() {
-  const typedRef = useRef(null)
+  const typedRef = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
@@ -14,28 +14,26 @@ export default function Hero() {
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
-    })
+    });
 
     return () => {
-      typed.destroy()
-    }
-  }, [])
+      typed.destroy();
+    };
+  }, []);
 
   return (
-    <section className="py-20 text-center relative overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-10"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-      </div>
+    <section
+      className="py-20 text-center relative overflow-hidden transition-colors duration-500 bg-white text-gray-900 dark:bg-black dark:text-white"
+    >
       <div className="container mx-auto px-4 relative z-10">
         <h1
-          className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl"
+          className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl"
           data-aos="fade-down"
         >
           Welcome to TechBuddySpace
         </h1>
         <h2
-          className="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl"
+          className="mb-4 text-3xl font-bold leading-none tracking-tight md:text-4xl lg:text-5xl"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -45,7 +43,7 @@ export default function Hero() {
           <span ref={typedRef}></span>
         </p>
         <p
-          className="mb-8 text-lg font-normal text-gray-600 sm:px-16 lg:text-xl xl:px-48"
+          className="mb-8 text-lg font-normal sm:px-16 lg:text-xl xl:px-48"
           data-aos="fade-up"
           data-aos-delay="600"
         >
@@ -58,6 +56,5 @@ export default function Hero() {
         </Button>
       </div>
     </section>
-  )
+  );
 }
-
