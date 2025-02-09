@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -56,16 +56,16 @@ export default function Footer() {
           <div>
             <h4 className="text-md font-semibold mb-4 text-gray-900 dark:text-white">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                <FaFacebook />
+              <Link href="https://www.youtube.com/@TECHBUDDYSPACE" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                <FaYoutube />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-                <FaTwitter />
+              <Link href="https://www.instagram.com/techbuddyspace" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                <FaInstagram />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <Link href="https://www.linkedin.com/in/techbuddyspace" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 <FaLinkedin />
               </Link>
-              <Link href="#" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+              <Link href="https://github.com/TechBuddySpace" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 <FaGithub />
               </Link>
             </div>

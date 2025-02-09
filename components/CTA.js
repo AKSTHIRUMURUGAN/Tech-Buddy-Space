@@ -32,7 +32,7 @@ export default function CTA() {
         <Button
           size="md"
           variant="secondary"
-          className="animate-pulse glow-button"
+          className="animate-pulse glow-button p-2"
           data-aos="zoom-in"
           data-aos-delay="600"
         >

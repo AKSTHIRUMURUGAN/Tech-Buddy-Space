@@ -50,7 +50,7 @@ export default function Hero() {
           Join the TechBuddySpace revolution and learn like never before! Our unique approach combines peer learning,
           practical projects, and a supportive community to help you master tech skills in Tanglish.
         </p>
-        <Button size="md" className="animate-pulse glow-button" data-aos="zoom-in" data-aos-delay="800">
+        <Button size="md" className="animate-pulse glow-button p-2" data-aos="zoom-in" data-aos-delay="800">
           Be Our Buddy Gang (Registration Open Soon)
           <FaRocket className="ml-2" />
         </Button>

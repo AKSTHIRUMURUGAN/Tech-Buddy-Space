@@ -9,12 +9,9 @@ import {
 } from "@clerk/nextjs";
 import {
   FaHome,
-  FaHandsHelping,
-  FaMotorcycle,
-  FaUserCircle,
-  FaCoins,
+ FaQuestion,
   FaUsers,
-  FaEnvelope,
+  FaRegListAlt
 } from "react-icons/fa";
 import {
   Navbar,
@@ -29,20 +26,21 @@ import {
 import ThemeToggle from "../Theme";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { MdEmail } from "react-icons/md";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState("");
-  const [logo,setLogo]=useState("")
+  const [logo,setLogo]=useState("./logo1.png")
   const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(); // State for tracking active menu item
 
   const menuItems = [
     { name: "Home", icon: <FaHome />, path: "/" },
-    { name: "Features", icon: <FaHandsHelping />, path: "/features" },
-    { name: "Why Us", icon: <FaMotorcycle />, path: "/why-us" },
+    { name: "Features", icon: <FaRegListAlt />, path: "/features" },
+    { name: "Why Us", icon: <FaQuestion />, path: "/why-us" },
     { name: "Team Page", icon: <FaUsers />, path: "/team" },
-    { name: "Contact Us", icon: <FaEnvelope />, path: "/contact_us" },
+    { name: "Contact Us", icon: <MdEmail />, path: "/contact_us" },
   ];
 
   const handleNavigation = (path, index) => {
@@ -51,14 +49,14 @@ export default function App() {
   };
 
   // Load theme from localStorage
-  useEffect(() => {
-    setLogo(localStorage.getItem("theme")=="dark"?"./logo2.png" : "./logo1.png"); // Default to light if not set
-  }, []);
+  // useEffect(() => {
+  //   setLogo(localStorage.getItem("theme")=="dark"?"./logo2.png" : "./logo1.png"); // Default to light if not set
+  // }, []);
 
   // Function to handle theme change
   const handleThemeChange = () => {
-    setTheme(localStorage.getItem("theme")=="dark"?"light":"dark")
-    setLogo(theme=="dark"?"./logo1.png" : "./logo2.png"); // Update state
+    localStorage.setItem("theme",localStorage.getItem("theme")=="dark"?"light":"dark")
+    setLogo(localStorage.getItem("theme")=="dark"?"./logo2.png" : "./logo1.png");
   };
 
 
@@ -72,7 +70,7 @@ export default function App() {
           />
           <NavbarBrand>
             {/* Image updates based on theme */}
-            <Link href="/">
+            <Link onClickCapture={()=>{router.push("/")}}>
             <Image
               src={logo}
               width={90}
@@ -85,22 +83,22 @@ export default function App() {
 
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-            <Link color="foreground" href="/">
+            <Link onClickCapture={()=>{router.push("/")}}>
               Home
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/features">
+            <Link onClickCapture={()=>{router.push("/features")}}>
               Features
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link aria-current="page" href="/why-us">
+            <Link onClickCapture={()=>{router.push("/why-us")}}>
               Why us?
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/contact_us">
+            <Link onClickCapture={()=>{router.push("/contact_us")}}>
               Contact Us
             </Link>
           </NavbarItem>
