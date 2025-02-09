@@ -33,7 +33,7 @@ const cycleSteps = [
 
 export default function LearningCycle() {
   return (
-    <section id="learning-cycle" className="py-20 bg-gray-50">
+    <section id="learning-cycle" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="mb-12 text-3xl font-bold text-center">Our Revolutionary Learning Cycle</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

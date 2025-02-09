@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className } >
       <HeroUIProvider>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col align-middle w-[100%] bg-white dark:bg-black transition-colors duration-500">
           {/* <Header /> */}
-          <Navbar/>
+          <Navbar/> 
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>

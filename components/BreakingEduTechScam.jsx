@@ -19,10 +19,10 @@ const Solution = ({ description }) => (
 export default function BreakingEduTechScam() {
   return (
     <UniqueCard title="Breaking the Edutech Scam: The Mission of TechBuddySpace" icon={AlertTriangle}>
-      <p className="mb-4">
+      <h4 className="mb-4">
         TechBuddySpace was created to <Badge variant="secondary">disrupt the scams</Badge> in the edutech industry and
         provide a genuine, affordable, and practical learning platform for college students.
-      </p>
+      </h4>
 
       <h3 className="font-semibold mb-2">The Problem:</h3>
       <Problem description="Fake Promises: Companies infiltrate with flashy marketing claims." />

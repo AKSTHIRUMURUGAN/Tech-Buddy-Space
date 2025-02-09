@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge"
 export default function StartupSchema() {
   return (
     <UniqueCard title="Our Startup Schema Based on This Model" icon={Layers}>
-      <p className="mb-4">
-        The <Badge variant="secondary">Learn-Practice-Build-Compete</Badge> cycle is at the heart of everything we do:
-      </p>
+      
+       <h1> The <Badge variant="secondary">Learn-Practice-Build-Compete</Badge> cycle is at the heart of everything we do:</h1>
+      
       <ul className="space-y-2 mb-4">
         <li>
           <strong>Learn:</strong> Live classes with peer mentors.
@@ -22,7 +22,7 @@ export default function StartupSchema() {
           <strong>Compete:</strong> Hackathons, competitions, and a reward system to foster growth and innovation.
         </li>
       </ul>
-      <p>This cycle ensures that every student leaves with:</p>
+      <h1>This cycle ensures that every student leaves with:</h1>
       <ol className="list-decimal list-inside space-y-1 mt-2">
         <li>A clear understanding of concepts.</li>
         <li>Practical skills to solve real-world problems.</li>

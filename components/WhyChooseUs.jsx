@@ -15,10 +15,10 @@ const FeatureItem = ({ icon: Icon, title, description }) => (
 export default function WhyChooseUs() {
   return (
     <UniqueCard title="Why Choose Us?" icon={CheckCircle}>
-      <p className="mb-4">
+      <div className="mb-4">
         We break away from outdated, overpriced education models. Instead, we focus on{" "}
         <Badge variant="secondary">real learning</Badge> through a proven, dynamic cycle.
-      </p>
+      </div>
 
       <FeatureItem
         icon={Book}

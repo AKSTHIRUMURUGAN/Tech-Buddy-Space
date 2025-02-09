@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge"
 export default function CoreIdeology() {
   return (
     <UniqueCard title="The Core Ideology of TechBuddySpace: Friends Teaching Friends" icon={Users}>
-      <p className="mb-4">
+      <h3 className="mb-4">
         At <Badge variant="secondary">TechBuddySpace</Badge>, we believe that learning from a <em>friend</em> is more
         impactful than learning from a professor, YouTube videos, or lengthy courses.
-      </p>
+      </h3>
 
       <h3 className="font-semibold mb-2">A Friend's Teaching Advantage:</h3>
       <p className="mb-4">

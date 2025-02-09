@@ -30,7 +30,7 @@ export default function CTA() {
           professional starts here!
         </p>
         <Button
-          size="lg"
+          size="md"
           variant="secondary"
           className="animate-pulse glow-button"
           data-aos="zoom-in"

@@ -108,7 +108,7 @@ export default function Pricing() {
             </ul>
           </CardContent>
           <CardFooter>
-            <Button className="w-full glow-button">Join the Waitlist</Button>
+            <Button className="glow-button">Join the Waitlist</Button>
           </CardFooter>
         </Card>
       </div>

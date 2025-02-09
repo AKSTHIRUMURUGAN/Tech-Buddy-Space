@@ -25,7 +25,7 @@ export default function Hero() {
     <section
       className="py-20 text-center relative overflow-hidden transition-colors duration-500 bg-white text-gray-900 dark:bg-black dark:text-white"
     >
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="w-[100vw] mx-auto px-4 relative z-10">
         <h1
           className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl"
           data-aos="fade-down"
@@ -50,7 +50,7 @@ export default function Hero() {
           Join the TechBuddySpace revolution and learn like never before! Our unique approach combines peer learning,
           practical projects, and a supportive community to help you master tech skills in Tanglish.
         </p>
-        <Button size="lg" className="animate-pulse glow-button" data-aos="zoom-in" data-aos-delay="800">
+        <Button size="md" className="animate-pulse glow-button" data-aos="zoom-in" data-aos-delay="800">
           Be Our Buddy Gang (Registration Open Soon)
           <FaRocket className="ml-2" />
         </Button>

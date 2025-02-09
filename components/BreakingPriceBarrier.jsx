@@ -5,10 +5,10 @@ import { Badge } from "@/components/ui/badge"
 export default function BreakingPriceBarrier() {
   return (
     <UniqueCard title="Breaking the Price Barrier: Affordable Learning for All" icon={DollarSign}>
-      <p className="mb-4">
+      <h3 className="mb-4">
         At <Badge variant="secondary">TechBuddySpace</Badge>, we believe quality education shouldn't come at a premium.
         Our prices are intentionally set <strong>very low</strong>, breaking the overpriced learning industry norm.
-      </p>
+      </h3>
 
       <h3 className="font-semibold mb-2">What We DON'T Do:</h3>
       <ul className="space-y-2 mb-4">

@@ -6,8 +6,8 @@ const FormulaStep = ({ icon: Icon, title, description }) => (
   <div className="flex items-start space-x-2 mb-4">
     <Icon className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
     <div>
-      <h3 className="font-semibold">{title}</h3>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <h1 className="font-semibold">{title}</h1>
+      <h3 className="text-sm text-muted-foreground">{description}</h3>
     </div>
   </div>
 )
@@ -15,10 +15,10 @@ const FormulaStep = ({ icon: Icon, title, description }) => (
 export default function TechBuddySpaceFormula() {
   return (
     <UniqueCard title="The TechBuddySpace Formula: Learn, Practice, Build, Compete (with Rewards)" icon={Book}>
-      <p className="mb-4">
+      <h4 className="mb-4">
         At TechBuddySpace, we don't just teach; we{" "}
         <Badge variant="secondary">transform learning into a dynamic experience</Badge>:
-      </p>
+      </h4>
 
       <FormulaStep
         icon={Book}
