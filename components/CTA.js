@@ -29,6 +29,7 @@ export default function CTA() {
           Learn, build, and succeed together in a supportive community. Your journey to becoming a skilled tech
           professional starts here!
         </p>
+        <a  href="https://docs.google.com/forms/d/e/1FAIpQLSfpr0gA7lwy3ZJIt-GEbuVja9fypg3UK2hk1E7FmFDxd9wOsw/viewform">
         <Button
           size="md"
           variant="secondary"
@@ -39,6 +40,7 @@ export default function CTA() {
           Be Our Buddy Gang (Registration Open Soon)
           <FaArrowRight className="ml-2" />
         </Button>
+        </a>
         <p
           className="mt-4 text-sm text-black dark:text-gray-400"
           data-aos="fade-up"

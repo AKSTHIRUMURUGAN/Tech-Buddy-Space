@@ -13,7 +13,7 @@ export default function Pricing() {
   });
 
   useEffect(() => {
-    const countdownDate = new Date("2025-02-05T18:00:00").getTime();
+    const countdownDate = new Date("2025-02-23T18:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();

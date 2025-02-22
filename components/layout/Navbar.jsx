@@ -30,16 +30,21 @@ import { MdEmail } from "react-icons/md";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("");
-  const [logo,setLogo]=useState("./logo1.png")
+  const [theme, setTheme] = useState("dark");
+  const [logo,setLogo]=useState("./logo2.png")
   const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(); // State for tracking active menu item
+  
+  useEffect(()=>{
+    setTheme(localStorage.getItem("theme"));
+    setLogo((localStorage.getItem("theme")=="dark"?"./logo2.png" : "./logo1.png"));
+  },[])
 
   const menuItems = [
     { name: "Home", icon: <FaHome />, path: "/" },
     { name: "Features", icon: <FaRegListAlt />, path: "/features" },
     { name: "Why Us", icon: <FaQuestion />, path: "/why-us" },
-    { name: "Team Page", icon: <FaUsers />, path: "/team" },
+    // { name: "Team Page", icon: <FaUsers />, path: "/team" },
     { name: "Contact Us", icon: <MdEmail />, path: "/contact_us" },
   ];
 
@@ -107,16 +112,16 @@ export default function App() {
         <NavbarContent justify="end">
           {/* Call theme change function */}
           <NavbarItem onClick={handleThemeChange} className="lg:flex">
-            <ThemeToggle />
+            <ThemeToggle theme={theme}/>
           </NavbarItem>
-          <NavbarItem>
+          {/* <NavbarItem>
             <SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
-          </NavbarItem>
+          </NavbarItem> */}
         </NavbarContent>
 
         <NavbarMenu>
