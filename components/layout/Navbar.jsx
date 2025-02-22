@@ -1,13 +1,6 @@
 "use client";
 import React, { useEffect, useState} from "react";
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
-import {
   FaHome,
  FaQuestion,
   FaUsers,
@@ -66,7 +59,6 @@ export default function App() {
 
 
   return (
-    <ClerkProvider>
       <Navbar onMenuOpenChange={setIsMenuOpen}>
         <NavbarContent>
           <NavbarMenuToggle
@@ -140,6 +132,5 @@ export default function App() {
           ))}
         </NavbarMenu>
       </Navbar>
-    </ClerkProvider>
   );
 }
