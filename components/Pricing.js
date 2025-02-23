@@ -38,7 +38,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20  bg-white dark:bg-black transition-colors duration-500"
+      className="py-20 bg-white dark:bg-black transition-colors duration-500"
     >
       <div className="container mx-auto px-4">
         <h2 className="mb-4 text-3xl font-bold text-center text-gray-900 dark:text-white glow-text" data-aos="fade-up">
@@ -58,28 +58,38 @@ export default function Pricing() {
             </CardDescription>
           </CardHeader>
           <CardContent>
+            {/* Countdown Timer */}
             <div className="text-center">
-              <p className="text-3xl font-bold mb-4 glow-text">Price Revealing Soon!</p>
+              <p className="text-2xl font-semibold mb-2 glow-text">Price Revealed In:</p>
               <div className="grid grid-cols-4 gap-2 text-sm text-gray-600 dark:text-gray-300">
                 <div>
-                  <span className="block text-2xl font-bold">{timeLeft.days}</span>
+                  <span className="block text-sm font-semibold">{timeLeft.days}</span>
                   Days
                 </div>
                 <div>
-                  <span className="block text-2xl font-bold">{timeLeft.hours}</span>
+                  <span className="block text-sm font-semibold">{timeLeft.hours}</span>
                   Hours
                 </div>
                 <div>
-                  <span className="block text-2xl font-bold">{timeLeft.minutes}</span>
+                  <span className="block text-sm font-semibold">{timeLeft.minutes}</span>
                   Minutes
                 </div>
                 <div>
-                  <span className="block text-2xl font-bold">{timeLeft.seconds}</span>
+                  <span className="block text-sm font-semibold">{timeLeft.seconds}</span>
                   Seconds
                 </div>
               </div>
             </div>
 
+            {/* Pricing Section */}
+            <p className="text-center text-2xl font-semibold mb-2 glow-text">Price Revealed🎉</p>
+            <div className="text-center mt-6">
+              <p className="text-4xl font-extrabold text-gray-600 dark:text-gray-300 glow-text shadow-lg">
+                ₹499<span className="text-sm font-bold">/month</span>
+              </p> 
+            </div>
+
+            {/* Features List */}
             <ul className="mt-6 space-y-2 text-gray-600 dark:text-gray-300">
               <li className="flex items-center">
                 <svg className="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -107,8 +117,10 @@ export default function Pricing() {
               </li>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="glow-button">Join the Waitlist</Button>
+
+          {/* Call to Action */}
+          <CardFooter className="flex justify-center">
+            <Button className="glow-button">Join Now</Button>
           </CardFooter>
         </Card>
       </div>

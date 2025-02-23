@@ -52,7 +52,7 @@ export default function Hero() {
         </p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpr0gA7lwy3ZJIt-GEbuVja9fypg3UK2hk1E7FmFDxd9wOsw/viewform">
         <Button size="md" className="animate-pulse glow-button p-2" data-aos="zoom-in" data-aos-delay="800" >
-          Be Our Buddy Gang (Registration Open Soon)
+          Be Our Buddy Gang
           <FaRocket className="ml-2" />
         </Button>
         </a>

@@ -37,7 +37,7 @@ export default function CTA() {
           data-aos="zoom-in"
           data-aos-delay="600"
         >
-          Be Our Buddy Gang (Registration Open Soon)
+          Be Our Buddy Gang 😎
           <FaArrowRight className="ml-2" />
         </Button>
         </a>
